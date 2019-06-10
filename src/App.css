@@ -1,0 +1,39 @@
+.App {
+  text-align: center;
+}
+
+.widget {
+  width: 202px;
+  margin: 100px auto;
+  border: 1px solid black;
+  padding: 20px;
+}
+
+button {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 10;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+}
+
+.active, button:hover {
+  background-color: #ccc;
+}
+
+h2 {
+  text-align: left;
+}
+
+.title {
+  display:inline-flex;
+  padding-bottom: 20px;
+}
+.react-switch {
+  vertical-align: middle;
+  margin-left: 4px;
+}
