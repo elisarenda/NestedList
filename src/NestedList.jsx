@@ -29,7 +29,6 @@ class NestedList extends React.Component {
   	}
 
 	render() {
-	
 		const list = [
 			{
 				id: 1,
@@ -95,21 +94,25 @@ class NestedList extends React.Component {
 									/>
 								</label>
 							</div>
-							<button onClick={this.toogleContent}>
-									<h3 className="panel">List n° {item.id}: {item.title}</h3>
-							</button>
-							{item.list.map((subitem) => {
-								return (
-									<div>
-										{showContent === true ? 
-											<ul>
-												<li>{subitem.firstname}</li>
-												<li>{subitem.lastname}</li>
-											</ul>
-										: " " }
-									</div>
-								);
-							})}
+							{this.state.checked ? 
+							<div>
+								<button onClick={this.toogleContent}>
+										<h3 className="panel">List n° {item.id}: {item.title}</h3>
+								</button>
+								{item.list.map((subitem) => {
+									return (
+										<div>
+											{showContent === true ? 
+												<ul>
+													<li>{subitem.firstname}</li>
+													<li>{subitem.lastname}</li>
+												</ul>
+											: " " }
+										</div>
+									);
+								})}
+							</div>
+							: ''}
 						</div>
 					);
 				})}
